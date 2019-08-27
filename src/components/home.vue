@@ -90,7 +90,7 @@
           { title: 'Users', icon: 'mdi-account-group-outline' },
         ],
         model: 0,
-        mini: true,
+        mini: false,
     }),
   }
 </script>
