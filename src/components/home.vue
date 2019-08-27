@@ -43,8 +43,7 @@
 
     <v-app-bar
       app
-      color="indigo"
-      dark
+      color="megHeader"
     >
       <!-- <v-app-bar-nav-icon  @click.stop="mini = !mini"></v-app-bar-nav-icon> -->
       <v-toolbar-title>Application</v-toolbar-title>
@@ -64,12 +63,12 @@
         </v-row>
       </v-container>
     </v-content>
-    <v-footer
-      color="indigo"
+    <!-- <v-footer
+      color="megHeader"
       app
     >
       <span class="white--text">&copy; 2019</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -91,7 +90,13 @@
           { title: 'Users', icon: 'mdi-account-group-outline' },
         ],
         model: 0,
-        mini: false,
+        mini: true,
     }),
   }
 </script>
+<style lang="scss" scoped>
+  .megHeader{
+    color: white;
+    background:linear-gradient(to right, #21539B , #21d2b9);
+  }
+</style>
