@@ -76,7 +76,7 @@
   import navigationDrawer from '../components/navigationDrawer'
   export default {
     components:{
-      navigationDrawer
+      //navigationDrawer
     },
     props: {
       source: String,
