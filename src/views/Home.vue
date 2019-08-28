@@ -23,11 +23,12 @@
       <v-divider></v-divider>
 
       <v-list dense>
-         <v-list-item-group v-model="model">
+         <v-list-item-group  v-model="model">
         <v-list-item
           v-for="item in items"
           :key="item.title"
           link
+         
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>

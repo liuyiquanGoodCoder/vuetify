@@ -1,11 +1,12 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer
-      v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
+       :mini-variant.sync="mini"
       app
     >
-      <v-list dense>
+    <v-list dense>
+       <v-list-item-group>
         <template v-for="item in items">
           <v-row
             v-if="item.heading"
@@ -61,6 +62,7 @@
             v-else
             :key="item.text"
             @click="none"
+            
           >
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
@@ -72,51 +74,21 @@
             </v-list-item-content>
           </v-list-item>
         </template>
+         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> 
 
     <v-app-bar
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
+      clipped-left
       app
-      color="blue darken-3"
       dark
+      color="megHeader"
     >
       <v-toolbar-title
-        style="width: 300px"
-        class="ml-0 pl-4"
+        class="ml-0 pl-0"
       >
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <!-- <span class="hidden-sm-and-down">Google Contacts</span> -->
+        <v-app-bar-nav-icon  @click.stop="mini = !mini"></v-app-bar-nav-icon>
       </v-toolbar-title>
-      <!-- <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="search"
-        label="Search"
-        class="hidden-sm-and-down"
-      ></v-text-field>
-      <div class="flex-grow-1"></div>
-      <v-btn icon>
-        <v-icon>mdi-apps</v-icon> 
-      </v-btn>-->
-      <!-- <v-btn icon>
-        <v-icon>notifications</v-icon>
-      </v-btn> -->
-      <!-- <v-btn
-        icon
-        large
-      >
-        <v-avatar
-          size="32px"
-          item
-        >
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
-            alt="Vuetify"
-          >
-          </v-img></v-avatar>
-      </v-btn> -->
     </v-app-bar>
     <v-content>
       <v-container
@@ -143,8 +115,7 @@
         navigationDrawer
     },
     data: () => ({
-      dialog: false,
-      drawer: null,
+      mini: false,
       items: [
         { icon: 'mdi-contacts', text: 'Contacts' },
         { icon: 'mdi-history', text: 'Frequently contacted' },
@@ -182,3 +153,9 @@
     }
   }
 </script>
+<style lang="scss" scoped>
+  .megHeader{
+    color: white;
+    background:linear-gradient(to right, #21539B , #21d2b9);
+  }
+</style>

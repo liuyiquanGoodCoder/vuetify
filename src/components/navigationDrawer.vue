@@ -1,5 +1,4 @@
 <template>
-  <v-card>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant.sync="mini"
@@ -41,8 +40,6 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
-  </v-card>
 </template>
 <script>
  
