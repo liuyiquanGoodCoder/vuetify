@@ -85,10 +85,29 @@
       color="megHeader"
     >
       <v-toolbar-title
-        class="ml-0 pl-0"
+        style="width: 100%"
+        class="mb-1 pl-0"
       >
-        <v-app-bar-nav-icon  @click.stop="mini = !mini"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon  @click.stop="mini = !mini" small></v-app-bar-nav-icon>
       </v-toolbar-title>
+       <v-btn
+        icon
+        small 
+        class="mr-2 mb-1"
+      >
+        <v-icon>mdi-fullscreen</v-icon>
+       </v-btn>
+       <v-btn
+        icon
+        class="mr-2 mb-1"
+      >
+        <v-avatar  size="36">
+          <img
+            src="https://cdn.vuetifyjs.com/images/john.jpg"
+            alt="John"
+          >
+        </v-avatar>
+       </v-btn>
     </v-app-bar>
     <v-content>
       <v-container
@@ -155,6 +174,7 @@
 </script>
 <style lang="scss" scoped>
   .megHeader{
+    height: 56px;
     color: white;
     background:linear-gradient(to right, #21539B , #21d2b9);
   }
